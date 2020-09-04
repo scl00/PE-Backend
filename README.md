@@ -6,4 +6,4 @@ In the project directory, you can run:
 
 Run the app in the development mode:
 
-###`npm run dev`
+### `npm run dev`
