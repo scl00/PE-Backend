@@ -83,6 +83,7 @@ const loginUser = async (req, res = response ) => {
       return res.status(400).json({
         status: false,
         msg: "Email y/o contraseña son incorrectos",
+        msg: email
       });
     }
 
@@ -102,6 +103,8 @@ const loginUser = async (req, res = response ) => {
        status: true,
        uid: usuario.id, 
        name: usuario.nombre,
+       password: usuario.password,
+       email: usuario.email,
        token
      });
     
@@ -126,6 +129,9 @@ const renewToken = async (req, res = response ) => {
     token 
   });
 } 
+
+
+
 
   module.exports = {
     registerUser, 
